@@ -1,0 +1,2 @@
+[workspace]
+members = ["sig-provider", "sig-provider-proto", "sig-provider-server"]

@@ -1,0 +1,30 @@
+[package]
+name = "stats"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+entity = { path = "./entity" }
+blockscout-db = { git = "https://github.com/blockscout/blockscout-rs" }
+sea-orm = { version = "0.10", features = [
+    "sqlx-postgres",
+    "runtime-tokio-rustls",
+] }
+tokio = "1"
+thiserror = "1.0"
+chrono = "0.4"
+async-trait = "0.1"
+tracing = "0.1"
+migration = { path = "./migration" }
+url = "2.3"
+rand = "0.8"
+lazy_static = "1.4"
+prometheus = "0.13"
+
+[dev-dependencies]
+pretty_assertions = "1.2"
+sea-orm-migration = { version = "0.10", features = [
+    "runtime-tokio-rustls",
+    "sqlx-postgres",
+] }
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
